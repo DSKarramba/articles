@@ -1,4 +1,4 @@
-\documentclass[notitlepage,12pt,a4paper,twocolumn]{report}
+\documentclass[notitlepage,12pt,a4paper]{report}
 \usepackage[utf8]{inputenc}
 \usepackage[russian]{babel}
 \usepackage[margin=2cm]{geometry}
@@ -11,11 +11,40 @@
 \usepackage{graphicx}
 \graphicspath{{images/}}
 
-%\usepackage[usenames,dvipsnames]{color}
-%\usepackage[colorlinks,linkcolor=black,citecolor=black,urlcolor=Blue]{hyperref}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage[colorlinks,linkcolor=black,citecolor=black,urlcolor=Blue]{hyperref}
 
 \newcommand{\E}{\mathcal{E}}
 \newcommand{\h}{\mathcal{H}}
+
+\makeatletter
+\renewcommand{\@makechapterhead}[1]{%
+  {\parindent \z@ \raggedright \normalfont
+    \ifnum \c@secnumdepth >\m@ne
+        \Large\bfseries \@chapapp\space \thechapter.\space
+    \fi
+    \Large \bfseries #1\par\nobreak
+    \vskip 3ex
+  }}
+\renewcommand{\@makeschapterhead}[1]{%
+  {\parindent \z@ \raggedright
+    \normalfont
+    \interlinepenalty\@M
+    \Large \bfseries  #1\par\nobreak
+    \vskip 3ex
+  }}
+
+\renewcommand\section{\@startsection      {section}{1}{\z@}{3ex}{3ex}%
+                                          {\normalfont\large\bfseries}}
+\renewcommand\subsection{\@startsection   {subsection}{2}{\z@}{2ex}{2ex}%
+                                          {\normalfont\normalsize\bfseries}}
+\renewcommand\subsubsection{\@startsection{subsubsection}{3}{\z@}{1.5ex}{1.5ex}%
+                                          {\normalfont\normalsize}}
+\renewcommand\paragraph{\@startsection    {paragraph}{4}{\z@}{1ex}{-1em}
+                                          {\normalfont\normalsize}}
+\renewcommand\subparagraph{\@startsection {subparagraph}{5}{\parindent}{1ex}{-1em}%
+                                          {\normalfont\normalsize}}
+\makeatother
 
 \begin{document}
 
