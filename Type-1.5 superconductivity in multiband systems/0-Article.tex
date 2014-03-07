@@ -1,0 +1,36 @@
+\documentclass[notitlepage,12pt,a4paper,twocolumn]{report}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage[margin=2cm]{geometry}
+
+\usepackage[vectors,derivative,root]{hedmaths}
+\usepackage[column]{hedfeatures}
+
+\usepackage{pscyr}
+
+\usepackage{graphicx}
+\graphicspath{{images/}}
+
+%\usepackage[usenames,dvipsnames]{color}
+%\usepackage[colorlinks,linkcolor=black,citecolor=black,urlcolor=Blue]{hyperref}
+
+\newcommand{\E}{\mathcal{E}}
+\newcommand{\h}{\mathcal{H}}
+
+\begin{document}
+
+  \tableofcontents
+
+  \input{1-Introduction} \newpage
+  \input{2-The_model} \newpage
+  \input{3-Vortex_asymptotics} \newpage
+  \input{4-Numerical_solution_of_the_problem} \newpage
+  \input{5-Conclusions} \newpage
+  \begin{appendix}
+    \input{A-Units} \newpage
+    \input{B-The_spectrum_of_h} \newpage
+    \input{C-Calculation_of_long_range_inter-vortex_forces} \newpage
+  \end{appendix}
+  \input{Z-References}
+
+\end{document}
