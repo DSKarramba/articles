@@ -17,7 +17,18 @@
 \newcommand{\E}{\mathcal{E}}
 \newcommand{\h}{\mathcal{H}}
 
-\makeatletter
+\addto\captionsrussian{\renewcommand\bibname{Ссылки}}
+\usepackage{cite}
+
+\makeatletter   
+\renewcommand\@biblabel[1]{\textsuperscript{#1}}
+
+\def\@cite#1#2{\leavevmode\cite@adjust%
+  \textsuperscript{#1\if@tempswa\@safe@activesfalse\citemid{#2}\fi
+  \spacefactor\@m
+  }
+ \@restore@auxhandle}
+
 \renewcommand{\@makechapterhead}[1]{%
   {\parindent \z@ \raggedright \normalfont
     \ifnum \c@secnumdepth >\m@ne
@@ -47,9 +58,25 @@
 \makeatother
 
 \begin{document}
-
-  \tableofcontents
-
+  
+  \begin{center}
+    In contrast to single-component superconductors, which are described at the
+    level of Ginzburg-Landau theory by a single parameter \( \kappa \) and are
+    divided in type-I \( \kappa < 1/\sqrt{2} \) and type-II
+    \( \kappa > 1/\sqrt{2} \) classes, two-component systems in general possess
+    three fundamental length scales and have been shown to possess a separate
+    <<type-1,5>> superconducting state\cite{bib:1,bib:2}
+. In that state, as a consequence of
+the extra fundamental length scale, vortices attract one another at long range but repel at shorter
+ranges, and therefore should form clusters in low magnetic fields. In this work we investigate the
+appearance of type-1.5 superconductivity and the interpretation of the fundamental length scales
+in the case of two active bands with substantial interband couplings such as intrinsic Josephson
+coupling, mixed gradient coupling and density-density interactions. We show that in the presence
+of substantial intercomponent interactions of the above types the system supports type-1.5 super-
+conductivity with fundamental length scales being associated with the mass of the gauge field and
+two masses of normal modes represented by mixed combinations of the density fields.
+  \end{center}
+  
   \input{1-Introduction} \newpage
   \input{2-The_model} \newpage
   \input{3-Vortex_asymptotics} \newpage
