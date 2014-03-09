@@ -1,10 +1,128 @@
 \chapter{Единицы измерения}
 
 В этом разделе мы дадим явное отображение нашего представления модели 
-Гинзбурга-Ландау к более общему виду представленного в учебниках. 
-Рассмотрим модель Гинзбурга-Ландау в общем представлении
+ГЛ к более общему виду представленного в учебниках. Рассмотрим модель 
+Гинзбурга-Ландау в общем представлении
 \begin{align*}
 	F = \frac{\hbar^2}{2m_1}\left| 
 		\left( \nabla - i\frac{e*}{\hbar c}A \right)\psi_1\right|^2 + 
-		\ldots 
-\end{align*}
+		\frac{\hbar^2}{2m_2}\left| 
+		\left( \nable - i\frac{e*}{\hbar c}A \right)\psi_2\right|^2 - 
+		\nu\hbar^2 Re\left\{ \left( \nabla - i\frac{e*}{\hbac c} \rigth)\psi_1 
+		\cdot\left( \nabla + i\frac{e*}{\hbar c}A \right)\psi*_2\right\} + \\
+		+ \frac{1}{8\pi}\left( \nabla\times A \right^2 + 
+		\alpha_1\left| \psi_1 \right|^2 + 
+		\frac{1}{2}\beta_1\left| \psi_1 \right|^4 + 
+		\alpha_2\left| \psi_2 \right|^2 + 
+		\frac{1}{2}\beta_2\left| \psi_2 \right|^4 - \\
+		-\eta_1\left| \psi_1 \right|\left| \psi_2 \right|
+		\cos(\theta_1 - \theta_2) + 
+		\eta_2\left| \psi_1 \right|^2\left| \psi_2 \right|^2
+\end{align*} % (A1)
+
+Давайте определим обозначенные величины
+\begin{align*}
+	\tilde{F} = \frac{4\pi}{\hbar^2 c^2}F \\
+	\tilde{A} = -\frac{A}{\hbar c} \\
+	\tilde{\psi}_a = \sqrt{\frac{4\pi}{m_a c^2}}\psi_a \\
+	\tilde{\nu} = \frac{m_1m_2}\nu \\
+	\tilde{\alpha}_a = \frac{m_a}{\hbar^2}\alpha_a \\
+	\tilde{\beta}_a = \frac{m^2_a c^2}{4\pi\hbar^2}\beta_a \\
+	\tilde{\eta}_1 = \frac{\sqrt{m_1 m_2}}{\hbar^2}\eta_1 \\
+	\tilde{\eta}_2 = \frac{m_1 m_2 c^2}{4\pi\hbar^2}\eta_2
+\end{align*} %(A2)
+
+Тогда 
+\begin{align*}
+	\tilde{F} = \frac{1}{2}\left| 
+		\left( \nabla + ie*\tilde{A} \right)\tilde{\psi}_2 \right|^2 + 
+		\frac{1}{2}\left| 
+		\left( \nabla + ie*\tilde{A} \right)\tilde{\psi}_2 \right|^2 - 
+		\tilde{\nu} Re\left\{ 
+		\left( \nabla + ie*\tilde{A} \right)\tilde{\psi}_1 \cdot 
+		\left( \nabla + ie*\tilde{A} \right)\tilde{\psi}*_2 \right\} + \\
+		\frac{1}{2}\left| \nabla\times\tilde{A} \right|^2 - 
+		\tilde{\alpha}_1\left| \tilde{\psi}_1 \right|^2 + 
+		\frac{\tilde{\beta}_1}{2}\left| \tilde{\psi}_1 \right|^2 + 
+		\tilde{\alpha}_2\left| \tilde{\psi}_2 \right|^2 + \\
+		\frac{\tilde{\beta}_2}{2}\left| \tilde{\psi}_2 \right|^2 + 
+		\tilde{\eta}_1 \left| \tilde{\psi}_1 \right|
+		\left| \tilde{\psi}_2 \right|\cos(\theta_1 - \theta_2) + 
+		\tilde{\eta}_2 \left| \tilde{\psi}_1 \right|^2 
+		\left| \tilde{\psi}_2 \right|^2
+\end{align*} %(A3)
+
+которая, опустив знак тильды, совпадает с представленным \eqref{eq:2} в 
+данной статье. На протяжении всей статьи, предполагается, что группа(!) 1 
+активна, то есть, \( \alpha_1 < 0 \). Перепишем уравнение \eqref{eq:2} для 
+\( F \), так, чтобы \( \alpha_1 \) была нормирована на \( -1 \) и 
+\( \beta_1 \) нормирована на \( 1 \). Это может быть достигнуто следующим 
+образом. Напомним (см. раздел III A), что в отсутствии межзонной связи (т.е. 
+когда \( \eta_1 = \eta_2 = \nu = 0 \)) condensate 1 имеет затухание линейного 
+масштаба \( 1/\hat{\mu}_1 = (-4\alpha_1)^{-1/2} \). Эта scale обычно 
+определяется длиной когерентности
+\begin{align*}
+	\hat{\xi}_1 = \frac{\sqrt{2}}{\hat{\mu}_1} = \frac{1}{\sqrt{-2\alpha_1}}
+\end{align*} %(A4)
+
+Ещё раз подчеркнём, что в присутствии межзонной связи, \( \hat{\xi}_1 \) вне 
+длины когерентности condensate 1. Таково определение параметра с шляпой, 
+напоминая, что это оригинальная длина когерентности только в несвязанном 
+случае. Напомним также, что vacuum density of condensate в несвязанной модели 
+\begin{align*}
+	\hat{u}_1 = \sqrt{\frac{-\alpha_1}{\beta_1}}
+\end{align*} %(A5)
+
+Наша второе перемасштабирование \( \sqrt{2}\hat{\xi}_1 \) как единицы длины 
+и \( \hat{u}_1 \) как единицы condensate density (вместе с компенсирующим 
+масштабированием \( F \), \( e* \) и \( A \)). Конкретно говоря
+\begin{align*}
+	\bar{r} = \frac{r}{\sqrt{2}\hat{\xi}_1} = \sqrt{-\alpha_1 r} \\
+	\bar{F} = \frac{2\har{\xi}^2_1}{\hat{u}^4_1}F = 
+		\frac{\beta^2_1}{-\alpha^3_1}F \\
+	\bar{\psi}_a = \frac{\psi_a}{\hat{u}_1} = 
+		\sqrt{\frac{\beta_1}{-\alpha_1}}\psi_a \\
+	\bar{A} = \frac{A}{\hat{u}_1} \\
+	\bar{e} = \frac{1}{\sqrt{2}}\hat{u}_1\hat{\xi}_1 e* = 
+		\frac{e*}{\sqrt{\beta_1}} \\
+	\bar{\alpha}_2 = 2\hat{\xi}^2_1 \alpha_2 = \frac{\alpha_2}{-\alpha_1} \\
+	\bar{\eta}_1 = 2\hat{\xi}^2_1 \eta_1 = \frac{\eta_1}{-\alpha_1} \\
+	\bar{\eta}_2 = 2\hat{\xi}^2_1 \hat{u}^2_1 \eta_2 = 
+		\frac{\eta_2}{\beta_1} \\
+	\bar{\nu} = \nu
+\end{align*} %(A6)
+
+Подставляя их в \eqref{eq:2} получаем
+\begin{align*}
+	\bar{F} = \frac{1}{2}\left| 
+		\left( \hat{\nabla} + i\hat{e}\hat{A} \right)\hat{\psi}_1 \right|^2 + 
+		\frac{1}{2}\left| 
+		\left( \hat{\nabla} + i\hat{e}\hat{A} \right)\hat{\psi}_2 \right|^2 -
+		\nu Re\left\{ \left( \hat{\nabla} + i\hat{e}\hat{A} \right)
+		\hat{\psi}_1 \cdot \left( \hat{\nabla} - i\hat{e}\hat{A} \right)
+		\hat{\psi}*_2 \right\} + \\
+		+ \frac{1}{2}\left| \hat{\nabla}\times\hat{A} \right|^2 - 
+		\left|\hat{\psi}_1\right|^2 + 
+		\frac{1}{2}\left|\hat{\psi}_1 \right|^2 - 
+		\hat{\alpha_2}\left| \hat{\psi}_2 \right|^2 + 
+		\frac{\hat{\beta}_2}{2}\left| \hat{\psi}_2 \right|^2 - \\
+		- \hat{\eta}_1\left|\hat{\psi}_1\right|\left|\hat{\psi}_2\right|
+		\cos(\theta_1 - \theta_2) + \hat{\eta}_2\left|\hat{\psi}_1\right|^2 
+		\left|\hat{\psi}_2\right|^2
+\end{align*} %(A7)
+
+Это (опуская верхнюю черту) и есть энергия ГЛ которая 
+используется в разделе IV для целей численного моделирования. 
+
+Окончательно отметим, что однокомпонентная модель ГЛ получается 
+из \eqref{eq:A7} определяя \( \psi_2 \equiv 0 \), глубину проникновения 
+\( \lambda = 1/\mu_a = 1/e \) и длину когерентности 
+\( \xi = 1/\sqrt{2} \), и, следовательно, параметр теории ГЛ
+\begin{align*}
+	\kappa = \lambda/\xi = \frac{\sqrt{2}}{e}
+\end{align*} %(A8)
+
+Так, в параметрах используемых в разделе IV, можно считать \( e \) в виде 
+обратного параметра теории ГЛ для однозонной модели. Значение \( e \) 
+соответствующий предельной однокомпонентной теории Богомольного c 
+\( e_c = 2 \) в этой интерпретации.
