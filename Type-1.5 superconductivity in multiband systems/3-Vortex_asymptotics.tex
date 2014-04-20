@@ -1,6 +1,100 @@
 \chapter{Вихревая асимптотика}
 \label{ch:3}
 
+The key to understanding the interaction of well separated vortices is to 
+analyze the large \( r \) asymptotics of the vortex solution. We will analyze 
+this problem in the context of a general TCGL model whose free energy takes 
+the form
+\begin{equation}
+(3)
+\end{equation}
+where \( F_p \) contains all the non-gradient terms (in particular, but not 
+restricted to, Josephson and density-density interaction terms). This free 
+energy is consistent with (2) in the case \( \nu = 0 \) We will show in 
+section IIID how to handle mixed gradient terms. The precise form of \( F_p \) 
+is not crucial for our analysis in this section. By gauge invariance, it can 
+depend on the condensates only via \( |\psi_1|, |\psi_2| \) and (if the 
+condensates are not independently conserved) on \( \theta_1 - \theta_2 \). We 
+will assume that \( F_p \) takes its minimum value (which we normalize to be 
+0) when \( |\psi_1| = u_1 > 0, |\psi_2| = u_2 > 0 \) and 
+\( \theta_1 - \theta_2 = 0 \). So, either there is no phase coupling 
+(\( F_p \) is independent of \( \theta_1 - \theta_2 \)) and the choice of 
+\( \theta_1 - \theta_2 = 0 \) is arbitrary, or the phase coupling is such as 
+to encourage phase locking. (Note that the case of phase anti-locked fields 
+can trivially be recovered from our analysis by mapping 
+\( \psi_2 \mapsto -\psi_1 \)).
+
+The field equations are obtained from \( F \) by demanding that the total 
+free energy \( E = \int F dx_1 dx_2 \) is stationary with respect to all 
+variations of \( \psi_1, \psi_2 \) and \( A_i \). A routine calculation yields 
+\begin{equation}
+(4)
+(5)
+\end{equation}
+This triple of coupled nonlinear partial differential equations supports 
+solutions of the form
+\begin{equation}
+(6)
+\end{equation}
+where \( f_1, f_2, a \) are real profile functions. Note that in some cases 
+mixed gradient terms favour non-axially symmetric solutions. In this section 
+we consider only axially symmetric vortices. Fields within the above ansatz 
+satisfy the field equations if and only if the profile functions 
+\( f_1(r), f_2(r), a(r) \) satisfy the coupled ordinary differential equation 
+system
+\begin{equation}
+(7)
+(8)
+\end{equation}
+The solution we require, the vortex, has boundary behaviour 
+\( f_a(r) \rightarrow u_a \), \( a(r) \rightarrow -1/e \) as 
+\( r \rightarrow \infty \). So, for large \( r \), the quantities 
+\begin{equation}
+(9)
+\end{equation}
+are small and so should, to leading order, satisfy the linearization of 
+(7),(8) about \( (u_1, u_2, -1/e) \). That is, at large \( r \),
+\begin{equation}
+(10)
+(11)
+\end{equation}
+where \( \mathcal{H} \) is the Hessian matrix of 
+\( F_p(|\psi_1|, |\psi_2|, 0) \) about its minimum 
+\begin{equation}
+(12)
+\end{equation}
+So \( \alpha \) decouples from \( \epsilon_1, \epsilon_2\) asymptotically, and 
+we see immediately that
+\begin{equation}
+(13)
+\end{equation}
+where \( K_n \) denotes the nth modified Bessel’s function of the second 
+kind\( ^{23} \), and \( q_0 \) is an unknown real constant. Hence, at large,
+\begin{equation}
+(14)
+\end{equation}
+Since, for all \( n \), 
+\begin{equation}
+(15)
+\end{equation}
+it follows that the magnetic field decays exponentially as a function of 
+\( r \), with length scale (penetration depth)
+\begin{equation}
+(16)
+\end{equation}
+
+By contrast, (10) represents, in general, a coupled pair of ordinary 
+differential equations for \( \epsilon_1, \epsilon_2 \). Since 
+\( (u_1, u_2, 0 ) \) is a \textit{minimum} of 
+\( F_p(|\psi_1|, |\psi_2|, \theta_1 - \theta_2) \), the Hessian matrix is a 
+\textit{positive definite} symmetric \( 2\times2 \) real matrix. Hence its 
+eigenvalues, \( \mu_1^2, \mu_2^2\) say, are real and positive, and its 
+eigenvectors, \( v_1, v_2 \) say, form an orthonormal basis for 
+\( \mathbb{R} \). Expanding in the basis \( v_1, v_2 \)
+\begin{equation}
+(17)
+\end{equation}
+
 \section{Симметричная модель \texorpdfstring{$ U(1) \times U(1) $}
   {U(1) x U(1)}}
 \label{sec:3-1}
