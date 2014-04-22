@@ -31,11 +31,10 @@ The field equations are obtained from \( F \) by demanding that the total
 free energy \( E = \int F dx_1 dx_2 \) is stationary with respect to all 
 variations of \( \psi_1, \psi_2 \) and \( A_i \). A routine calculation yields 
 \begin{gather}
-    D_i D_i \psi_a = 2\pder{F_p}{\psi_a^*}
+    D_i D_i \psi_a = 2\pder{F_p}{\psi_a^{*}}
     \label{eq:4} \\
-
     \partial_i \left( \partial_i A_j - \partial_j A_i \right) = 
-        e\Sum\limits_{a=1}^{2}\Im\left( \psi_a^* D_j \psi_a \right)
+        e\sum\limits_{a=1}^{2}\Im\left( \psi_a^* D_j \psi_a \right)
     \label{eq:5}
 \end{gather}
 This triple of coupled nonlinear partial differential equations supports 
@@ -51,28 +50,28 @@ we consider only axially symmetric vortices. Fields within the above ansatz
 satisfy the field equations if and only if the profile functions 
 \( f_1(r), f_2(r), a(r) \) satisfy the coupled ordinary differential equation 
 system
-\begin{equation}
+\begin{gather}
     f''_a + \frac{1}{r} f'_a - \frac{1}{r^2}(1+ea)^2 f_a = 
         \left. \pder{F_p}{|\psi_a|} \right|_{(u_1, u_2, 0)}
     \label{eq:7} \\
-
     a'' - \frac{1}{r} a' - e(1+ea)(f_1^2+f_2^2) = 0
     \label{eq:8}
-\end{equation}
+\end{gather}
 The solution we require, the vortex, has boundary behaviour 
 \( f_a(r) \rightarrow u_a \), \( a(r) \rightarrow -1/e \) as 
 \( r \rightarrow \infty \). So, for large \( r \), the quantities 
 \begin{equation}
+    \epsilon_a(r) = f_a(r) - u_a, \quad
+    \alpha(r) = a(r) + \frac{1}{e}
     \label{eq:9}
 \end{equation}
 are small and so should, to leading order, satisfy the linearization of 
 \eqref{eq:7},\eqref{eq:8} about \( (u_1, u_2, -1/e) \). That is, at large 
 \( r \),
 \begin{gather}
-    \epsilon''_a + \frac{1}{r} \epsilon'_a = \Sum\limits_{b=1}^{2}
+    \epsilon''_a + \frac{1}{r} \epsilon'_a = \sum\limits_{b=1}^{2}
         \mathcal{H}_{ab} \epsilon_b
     \label{eq:10} \\
-
     \alpha'' - \frac{1}{r} \alpha' - e^2(u_1^2 + u_2^2 )\alpha = 0
     \label{eq:11}
 \end{gather}
@@ -121,7 +120,6 @@ eigenvectors, \( v_1, v_2 \) say, form an orthonormal basis for
     \epsilon(r) = \chi_1(r) v_1 + \chi_2(r) v_2
     \label{eq:17}
 \end{equation}
-
 we see that \( \chi_1, \chi_2 \) satisfy the uncoupled pair of ordinary 
 differential equations
 \begin{equation}
@@ -151,7 +149,6 @@ Hence, at large \( r \) the density fields behave as
 \begin{gather}
     \psi_1 \sim \left[ u_1 + q_1\cos\Theta K_0(\mu_1 r) - 
         q_2\sin\Theta K_0(\mu_2 r) \right]e^{i\theta} \nonumber \\
-
     \psi_2 \sim \left[ u_2 + q_1\sin\Theta K_0(\mu_1 r) - 
         q_2\cos\Theta K_0(\mu_2 r) \right]e^{i\theta}
     \label{eq:21}
@@ -159,7 +156,7 @@ Hence, at large \( r \) the density fields behave as
 where, once again, \( K_0 \) is a Bessel function.
 
 From this analysis it follows that:
-\begin{itemize}
+\begin{enumerate}
     \item In general there are three fundamental length scales in the problem 
         (in contrast to the two length scales of one-component Ginzburg-Landau 
         theory) which manifest themselves in the vortex asymptotics, namely 
@@ -195,7 +192,7 @@ From this analysis it follows that:
         important to understand quantitatively the nature of the vortex 
         interactions at intermediate and short distances which will be 
         studied numerically in the section \ref{ch:5}.
-\end{itemize}
+\end{enumerate}
 
 Since the gauge field mediates a repulsive force between vortices, while the 
 condensate fields mediate an attractive force, it is clear that we can read 
@@ -203,9 +200,9 @@ off from the above analysis the condition under which the intervortex force is
 attractive at long range: we require that \( 1/\mu_A \) is \emph{not} the 
 longest of the three length scales, or, more explicitly, that (at least) one 
 of the eigenvalues of \( \mathcal{H} \) should be less that 
-\( \mu_A^2 = e^2(u_1^2 + u_2^2) \).  We can predict an explicit formula for 
+\( \mu_A^2 = e^2(u_1^2 + u_2^2) \). We can predict an explicit formula for 
 the long range two-vortex interaction potential, using the point vortex 
-formalism\( ^{19} \) (a brief review of the method in given in Appendix C). 
+formalism\cite{bib:19} (a brief review of the method in given in Appendix C). 
 This rests on the observation that, far from its core, the fields of the 
 vortex are identical to those of a hypothetical point particle in a linear 
 theory with two Klein-Gordon fields (\( \chi_1 \) and \( \chi_2 \) above) of 
@@ -225,7 +222,7 @@ than \( \mu_A \).
 
 One can ask, retrospectively, whether the approximation of \emph{linearizing} 
 in the small quantities \( \alpha(r), \chi_1(r), \chi_2(r) \) is well 
-justified. Rigorous analysis of the single component model\( ^{20} \) shows 
+justified. Rigorous analysis of the single component model\cite{bib:20} shows 
 that if either of the scalar mode masses, say, exceeds \( 2\mu_A \), then 
 quadratic terms in \( \alpha \) become comparable at large \( r \) with linear 
 terms in \( \chi_2 \), so that the equation for \( \chi_2 \) should include 
