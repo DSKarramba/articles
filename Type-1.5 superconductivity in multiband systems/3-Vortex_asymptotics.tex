@@ -6,11 +6,14 @@ analyze the large \( r \) asymptotics of the vortex solution. We will analyze
 this problem in the context of a general TCGL model whose free energy takes 
 the form
 \begin{equation}
-(3)
+    F = \frac{1}{2}\left( D_i \psi_1 \right)^{*} D_i \psi_1 + 
+        \frac{1}{2}\left( D_i \psi_2 \right)^{*} D_i \psi_2 + 
+        \frac{1}{2}\left( \partial_1 A_2 - \partial_2 A_1 \right)^2 + F_p
+    \label{eq:3}
 \end{equation}
 where \( F_p \) contains all the non-gradient terms (in particular, but not 
 restricted to, Josephson and density-density interaction terms). This free 
-energy is consistent with (2) in the case \( \nu = 0 \) We will show in 
+energy is consistent with \eqref{eq:2} in the case \( \nu = 0 \) We will show in 
 section IIID how to handle mixed gradient terms. The precise form of \( F_p \) 
 is not crucial for our analysis in this section. By gauge invariance, it can 
 depend on the condensates only via \( |\psi_1|, |\psi_2| \) and (if the 
@@ -27,15 +30,21 @@ can trivially be recovered from our analysis by mapping
 The field equations are obtained from \( F \) by demanding that the total 
 free energy \( E = \int F dx_1 dx_2 \) is stationary with respect to all 
 variations of \( \psi_1, \psi_2 \) and \( A_i \). A routine calculation yields 
-\begin{equation}
-(4)
-(5)
-\end{equation}
+\begin{gather}
+    D_i D_i \psi_a = 2\pder{F_p}{\psi_a^*}
+    \label{eq:4} \\
+
+    \partial_i \left( \partial_i A_j - \partial_j A_i \right) = 
+        e\Sum\limits_{a=1}^{2}\Im\left( \psi_a^* D_j \psi_a \right)
+    \label{eq:5}
+\end{gather}
 This triple of coupled nonlinear partial differential equations supports 
 solutions of the form
-\begin{equation}
-(6)
-\end{equation}
+\begin{gather}
+    \psi_a = f_a(r)e^{i\theta} \nonumber \\
+    (A_1, A_2) = \frac{a(r)}{r}(-\sin\theta, \cos\theta)
+    label{eq:6}
+\end{gather}
 where \( f_1, f_2, a \) are real profile functions. Note that in some cases 
 mixed gradient terms favour non-axially symmetric solutions. In this section 
 we consider only axially symmetric vortices. Fields within the above ansatz 
@@ -43,47 +52,64 @@ satisfy the field equations if and only if the profile functions
 \( f_1(r), f_2(r), a(r) \) satisfy the coupled ordinary differential equation 
 system
 \begin{equation}
-(7)
-(8)
+    f''_a + \frac{1}{r} f'_a - \frac{1}{r^2}(1+ea)^2 f_a = 
+        \left. \pder{F_p}{|\psi_a|} \right|_{(u_1, u_2, 0)}
+    \label{eq:7} \\
+
+    a'' - \frac{1}{r} a' - e(1+ea)(f_1^2+f_2^2) = 0
+    \label{eq:8}
 \end{equation}
 The solution we require, the vortex, has boundary behaviour 
 \( f_a(r) \rightarrow u_a \), \( a(r) \rightarrow -1/e \) as 
 \( r \rightarrow \infty \). So, for large \( r \), the quantities 
 \begin{equation}
-(9)
+    \label{eq:9}
 \end{equation}
 are small and so should, to leading order, satisfy the linearization of 
-(7),(8) about \( (u_1, u_2, -1/e) \). That is, at large \( r \),
-\begin{equation}
-(10)
-(11)
-\end{equation}
+\eqref{eq:7},\eqref{eq:8} about \( (u_1, u_2, -1/e) \). That is, at large 
+\( r \),
+\begin{gather}
+    \epsilon''_a + \frac{1}{r} \epsilon'_a = \Sum\limits_{b=1}^{2}
+        \mathcal{H}_{ab} \epsilon_b
+    \label{eq:10} \\
+
+    \alpha'' - \frac{1}{r} \alpha' - e^2(u_1^2 + u_2^2 )\alpha = 0
+    \label{eq:11}
+\end{gather}
 where \( \mathcal{H} \) is the Hessian matrix of 
 \( F_p(|\psi_1|, |\psi_2|, 0) \) about its minimum 
 \begin{equation}
-(12)
+    \mathcal{H}_{ab} = \left. \pcder{F_p}{|\psi_a|}{|\psi_b|} 
+        \right|_{(u_1, u_2, 0)}
+    \label{eq:12}
 \end{equation}
 So \( \alpha \) decouples from \( \epsilon_1, \epsilon_2\) asymptotically, and 
 we see immediately that
 \begin{equation}
-(13)
+    \alpha(r) = q_0 r K_1(\mu_A r), \quad
+    \mu_a = e\sqrt{u_1^2 + u_2^2}
+    \label{eq:13}
 \end{equation}
 where \( K_n \) denotes the nth modified Bessel’s function of the second 
 kind\( ^{23} \), and \( q_0 \) is an unknown real constant. Hence, at large,
 \begin{equation}
-(14)
+    \vec{A} \sim \left( -\frac{1}{er} + q_0 K_1(\mu_A r) \right)
+        (-\sin\theta, \cos\theta)
+    \label{eq:14}
 \end{equation}
 Since, for all \( n \), 
 \begin{equation}
-(15)
+    K_n(s) \sim \sqrt{\frac{\pi}{2s}}e^{-s} \text{ as } s \rightarrow \infty
+    \label{eq:15}
 \end{equation}
 it follows that the magnetic field decays exponentially as a function of 
 \( r \), with length scale (penetration depth)
 \begin{equation}
-(16)
+    \lambda \equiv \frac{1}{\mu_A} = \frac{1}{e\sqrt{u_1^2 + u_2^2}}
+    \label{eq:16}
 \end{equation}
 
-By contrast, (10) represents, in general, a coupled pair of ordinary 
+By contrast, \eqref{eq:10} represents, in general, a coupled pair of ordinary 
 differential equations for \( \epsilon_1, \epsilon_2 \). Since 
 \( (u_1, u_2, 0 ) \) is a \textit{minimum} of 
 \( F_p(|\psi_1|, |\psi_2|, \theta_1 - \theta_2) \), the Hessian matrix is a 
@@ -92,7 +118,89 @@ eigenvalues, \( \mu_1^2, \mu_2^2\) say, are real and positive, and its
 eigenvectors, \( v_1, v_2 \) say, form an orthonormal basis for 
 \( \mathbb{R} \). Expanding in the basis \( v_1, v_2 \)
 \begin{equation}
-(17)
+    \epsilon(r) = \chi_1(r) v_1 + \chi_2(r) v_2
+    \label{eq:17}
+\end{equation}
+
+we see that \( \chi_1, \chi_2 \) satisfy the uncoupled pair of ordinary 
+differential equations
+\begin{equation}
+    \label{eq:18}
+\end{equation}
+whence 
+\begin{equation}
+    \label{eq:19}
+\end{equation}
+for some (unknown) constants \( q_1, q_2 \). Since \( v_1, v_2 \) are 
+orthonormal, there is an angle \( \Theta \), which we call the \emph{mixing 
+angle}, such that the eigenvectors of \( \mathcal{H} \) are
+\begin{equation}
+    \label{eq:20}
+\end{equation}
+Hence, at large \( r \) the density fields behave as
+\begin{gather}
+    \nonumber
+    \label{eq:21}
+\end{gather}
+where, once again, \( K_0 \) is a Bessel function.
+
+From this analysis it follows that:
+\begin{itemize}
+    \item In general there are three fundamental length scales in the problem 
+        (in contrast to the two length scales of one-component Ginzburg-Landau 
+        theory) which manifest themselves in the vortex asymptotics, namely 
+        \( 1/\mu_A, 1/\mu_1 \) and \( 1/\mu_2 \).
+    \item These are constructed from the vacuum expectation values \( u_a \) 
+        of \( |\psi_a| \) (in the case of \( 1/\mu_A \)) and from the 
+        eigenvalues of \( \mathcal{H} \), the Hessian matrix of \( F_p \) 
+        about the vacuum (i.e. the ground state).
+    \item \( 1/\mu_{A} \) can be interpreted as the London penetration length 
+        of the magnetic field.
+    \item However, unless the mixing angle \( \Theta \) is a multiple of 
+        \( \pi/2, 1/\mu_1 \) and \( 1/\mu_2 \) cannot be interpreted as the 
+        coherence lengths of \( \psi_1, \psi_2 \) in the usual sense. This is 
+        because the normal modes of the field theory close to the vacuum are 
+        not \( |\psi_a| - u_a \), but rather
+        \[ 
+            \chi_1 = (|\psi_1| - u_1)\cos\Theta - (|\psi_2| - u_2)\sin\Theta 
+        \]
+        \[ 
+            \chi_2 = (|\psi_1| - u_1)\sin\Theta - (|\psi_2| - u_2)\cos\Theta 
+        \]
+        obtained by rotating through the mixing angle \( \Theta \), which is 
+        also determined by \( \mathcal{H} \). Therefore in general (e.g. in 
+        the presence of intercomponent Josephson coupling) for a one-flux 
+        quantum axially symmetric vortex, the recovery of both fields 
+        \( \psi_a \) at \emph{very} long range will be according to the same 
+        exponential law, set by the smaller of the masses \( \mu_1, \mu_2 \); 
+        One should use the representation in terms of the fields 
+        \( \chi_{1,2} \) to be handle properly the two length scales 
+        associated with the density recovery.
+    \item This analysis tells us only about the vortex structure at large 
+        \( r \). It gives no direct information on the vortex core, which is 
+        important to understand quantitatively the nature of the vortex 
+        interactions at intermediate and short distances which will be 
+        studied numerically in the section \ref{ch:5}.
+\end{itemize}
+
+Since the gauge field mediates a repulsive force between vortices, while the 
+condensate fields mediate an attractive force, it is clear that we can read 
+off from the above analysis the condition under which the intervortex force is 
+attractive at long range: we require that \( 1/\mu_A \) is \emph{not} the 
+longest of the three length scales, or, more explicitly, that (at least) one 
+of the eigenvalues of \( \mathcal{H} \) should be less that 
+\( \mu_A^2 = e^2(u_1^2 + u_2^2) \).  We can predict an explicit formula for 
+the long range two-vortex interaction potential, using the point vortex 
+formalism\( ^{19} \) (a brief review of the method in given in Appendix C). 
+This rests on the observation that, far from its core, the fields of the 
+vortex are identical to those of a hypothetical point particle in a linear 
+theory with two Klein-Gordon fields (\( \chi_1 \) and \( \chi_2 \) above) of 
+mass and a vector field (A) of mass \( \mu_A \). The point particle carries 
+scalar monopole charges \( 2\pi q_1 \) and \( 2\pi q_2 \) and a magnetic 
+dipole moment \( 2\pi q_0 \). Two such hypothetical particles held distance 
+\( r \) apart would experience an interaction potential
+\begin{equation}
+    \label{eq:22}
 \end{equation}
 
 \section{Симметричная модель \texorpdfstring{$ U(1) \times U(1) $}
