@@ -45,12 +45,13 @@
     (A_1, A_2) = \frac{a(r)}{r}(-\sin\theta, \cos\theta)
     label{eq:6}
 \end{gather}
-где \( f_1, f_2, a \) вещественные функции профиля. Note that in some cases 
-mixed gradient terms favour non-axially symmetric solutions. In this section 
-we consider only axially symmetric vortices. Fields within the above ansatz 
-satisfy the field equations if and only if the profile functions 
-\( f_1(r), f_2(r), a(r) \) satisfy the coupled ordinary differential equation 
-system
+где \( f_1, f_2, a \) вещественные функции профиля. Примем во внимание, что 
+в некоторых случаях смешанные градиентные слагаемые выступают за не 
+осесимметричное решение. В этом разделе мы рассмотрим только 
+аксиально-симметричные вихри. Поля в пределах указанного выше подхода 
+удовлетворяют уравнениям поля, если и только если функция профиля 
+\( f_1(r), f_2(r), a(r) \) удовлетворяют взаимной системе дифференциальных 
+уравнений
 \begin{gather}
     f''_a + \frac{1}{r} f'_a - \frac{1}{r^2}(1+ea)^2 f_a = 
         \left. \pder{F_p}{|\psi_a|} \right|_{(u_1, u_2, 0)}
@@ -58,17 +59,17 @@ system
     a'' - \frac{1}{r} a' - e(1+ea)(f_1^2+f_2^2) = 0
     \label{eq:8}
 \end{gather}
-The solution we require, the vortex, has boundary behaviour 
-\( f_a(r) \rightarrow u_a \), \( a(r) \rightarrow -1/e \) as 
-\( r \rightarrow \infty \). So, for large \( r \), the quantities 
+Потребуем чтобы вихревое решение имело поведение на границе
+\( f_a(r) \rightarrow u_a \), \( a(r) \rightarrow -1/e \) при
+\( r \rightarrow \infty \). Так, для больших \( r \) величины
 \begin{equation}
     \epsilon_a(r) = f_a(r) - u_a, \quad
     \alpha(r) = a(r) + \frac{1}{e}
     \label{eq:9}
 \end{equation}
-are small and so should, to leading order, satisfy the linearization of 
-\eqref{eq:7},\eqref{eq:8} about \( (u_1, u_2, -1/e) \). That is, at large 
-\( r \),
+мали и так должны быть в старшем порядке, удовлетворяющие линеаризации 
+\eqref{eq:7},\eqref{eq:8} относительно \( (u_1, u_2, -1/e) \). То есть, при 
+больших \( r \),
 \begin{gather}
     \epsilon''_a + \frac{1}{r} \epsilon'_a = \sum\limits_{b=1}^{2}
         \mathcal{H}_{ab} \epsilon_b
@@ -76,47 +77,48 @@ are small and so should, to leading order, satisfy the linearization of
     \alpha'' - \frac{1}{r} \alpha' - e^2(u_1^2 + u_2^2 )\alpha = 0
     \label{eq:11}
 \end{gather}
-where \( \mathcal{H} \) is the Hessian matrix of 
-\( F_p(|\psi_1|, |\psi_2|, 0) \) about its minimum 
+где \( \mathcal{H} \) является матрицей Гессе \( F_p(|\psi_1|, |\psi_2|, 0) \) 
+и его минимум
 \begin{equation}
     \mathcal{H}_{ab} = \left. \pcder{F_p}{|\psi_a|}{|\psi_b|} 
         \right|_{(u_1, u_2, 0)}
     \label{eq:12}
 \end{equation}
-So \( \alpha \) decouples from \( \epsilon_1, \epsilon_2\) asymptotically, and 
-we see immediately that
+Так \( \alpha \) асимптотически отделяется от \( \epsilon_1, \epsilon_2\) и 
+сразу видно, что
 \begin{equation}
     \alpha(r) = q_0 r K_1(\mu_A r), \quad
     \mu_a = e\sqrt{u_1^2 + u_2^2}
     \label{eq:13}
 \end{equation}
-where \( K_n \) denotes the nth modified Bessel’s function of the second 
-kind\( ^{23} \), and \( q_0 \) is an unknown real constant. Hence, at large,
+где \( K_n \) обозначает n-ую модифицированную функцию Бесселя второго порядка 
+\cite{bib:23}, и \( q_0 \) неизвестная действительная постоянная. Таким образом
 \begin{equation}
     \vec{A} \sim \left( -\frac{1}{er} + q_0 K_1(\mu_A r) \right)
         (-\sin\theta, \cos\theta)
     \label{eq:14}
 \end{equation}
-Since, for all \( n \), 
+Так, для всех \( n \), 
 \begin{equation}
     K_n(s) \sim \sqrt{\frac{\pi}{2s}}e^{-s} \text{ as } s \rightarrow \infty
     \label{eq:15}
 \end{equation}
-it follows that the magnetic field decays exponentially as a function of 
-\( r \), with length scale (penetration depth)
+отсюда вытекает, что магнитное поле затухает экспоненциально в зависимости от 
+\( r \), с масштабной величиной (глубина проникновения)
 \begin{equation}
     \lambda \equiv \frac{1}{\mu_A} = \frac{1}{e\sqrt{u_1^2 + u_2^2}}
     \label{eq:16}
 \end{equation}
 
-By contrast, \eqref{eq:10} represents, in general, a coupled pair of ordinary 
-differential equations for \( \epsilon_1, \epsilon_2 \). Since 
-\( (u_1, u_2, 0 ) \) is a \textit{minimum} of 
-\( F_p(|\psi_1|, |\psi_2|, \theta_1 - \theta_2) \), the Hessian matrix is a 
-\textit{positive definite} symmetric \( 2\times2 \) real matrix. Hence its 
-eigenvalues, \( \mu_1^2, \mu_2^2\) say, are real and positive, and its 
-eigenvectors, \( v_1, v_2 \) say, form an orthonormal basis for 
-\( \mathbb{R} \). Expanding in the basis \( v_1, v_2 \)
+С другой стороны, \eqref{eq:10} представляет, в общем, пару связанных 
+обыкновенных дифференциальных уравнений для \( \epsilon_1, \epsilon_2 \). Так 
+как \( (u_1, u_2, 0 ) \) является \textit{минимумом} от 
+\( F_p(|\psi_1|, |\psi_2|, \theta_1 - \theta_2) \), где матрица Гессе является  
+симметричной и \textit{положительно определенной} действительной матрицей 
+размера \( 2\times2 \). Следовательно, её собственные числа 
+\( \mu_1^2, \mu_2^2\), допустим вещественны и положительны, и её собственные 
+векторы \( v_1, v_2 \) формируют ортонормированный базис на \( \mathbb{R} \). 
+Expanding in the basis \( v_1, v_2 \)
 \begin{equation}
     \epsilon(r) = \chi_1(r) v_1 + \chi_2(r) v_2
     \label{eq:17}
@@ -127,12 +129,12 @@ differential equations
     \chi''_a + \frac{1}{r}\chi'_a = \mu_a^2 \chi_a
     \label{eq:18}
 \end{equation}
-whence 
+откуда
 \begin{equation}
     \chi_a(r) = q_a K_0(\mu_a r)
     \label{eq:19}
 \end{equation}
-for some (unknown) constants \( q_1, q_2 \). Since \( v_1, v_2 \) are 
+где \( q_1, q_2 \) некоторые (неизвестные) константы. Since \( v_1, v_2 \) are 
 orthonormal, there is an angle \( \Theta \), which we call the \emph{mixing 
 angle}, such that the eigenvectors of \( \mathcal{H} \) are
 \begin{equation}
@@ -146,7 +148,7 @@ angle}, such that the eigenvectors of \( \mathcal{H} \) are
     \end{array} \right)
     \label{eq:20}
 \end{equation}
-Hence, at large \( r \) the density fields behave as
+Так, при больших \( r \) поля плотности ведут себя как 
 \begin{gather}
     \psi_1 \sim \left[ u_1 + q_1\cos\Theta K_0(\mu_1 r) - 
         q_2\sin\Theta K_0(\mu_2 r) \right]e^{i\theta} \nonumber \\
@@ -154,9 +156,9 @@ Hence, at large \( r \) the density fields behave as
         q_2\cos\Theta K_0(\mu_2 r) \right]e^{i\theta}
     \label{eq:21}
 \end{gather}
-where, once again, \( K_0 \) is a Bessel function.
+где, ещё раз, \( K_0 \) -- функция(и) Бесселя.
 
-From this analysis it follows that:
+Из этого анализа следует, что:
 \begin{enumerate}
     \item In general there are three fundamental length scales in the problem 
         (in contrast to the two length scales of one-component Ginzburg-Landau 
@@ -241,13 +243,13 @@ suffices for our purposes.
   {U(1) x U(1)}}
 \label{sec:3-1}
 
-\section{Джозефоновский контакт}
+\section{Джозефсоновский контакт}
 \label{sec:3-2}
 
-\subsection{Сравнение со случаем пассивной второй band (?)}
+\subsection{Сравнение со случаем пассивной второй щелью (зоной)}
 \label{subsec:3-2-1}
 
-\section{Контакт плотность-плотность (?)}
+\section{Контакт типа плотность-плотность (?)}
 \label{sec:3-3}
 
 \section{Условия смешанного градиента}
