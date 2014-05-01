@@ -13,24 +13,24 @@
 \end{equation}
 где \( F_p \) содержит все не-градиентные члены (в частности, но не 
 ограничиваясь, джозефсоновским и плотность-плотность членами взаимодействия). 
-Эта свободная энергия соответствует \eqref{eq:2} в случае \( \nu = 0 \). 
-We will show in section IIID how to handle mixed gradient terms. The precise 
-form of \( F_p \) is not crucial for our analysis in this section. By gauge 
-invariance, it can depend on the condensates only via \( |\psi_1|, |\psi_2| \) 
-and (if the condensates are not independently conserved) on 
-\( \theta_1 - \theta_2 \). We will assume that \( F_p \) takes its minimum 
-value (which we normalize to be 0) when 
-\( |\psi_1| = u_1 > 0, |\psi_2| = u_2 > 0 \) and 
-\( \theta_1 - \theta_2 = 0 \). So, either there is no phase coupling 
-(\( F_p \) is independent of \( \theta_1 - \theta_2 \)) and the choice of 
-\( \theta_1 - \theta_2 = 0 \) is arbitrary, or the phase coupling is such as 
-to encourage phase locking. (Note that the case of phase anti-locked fields 
-can trivially be recovered from our analysis by mapping 
+Эта свободная энергия соответствует \eqref{eq:2} в случае \( \nu = 0 \). Мы 
+покажем в разделе IIID как работать со смешанными градиентными членами. Точная 
+форма \( F_p \) в данном разделе не является решающим фактором для анализа.
+При калибровочной инвариантности, это может зависеть от конденсатов только 
+через \( |\psi_1|, |\psi_2| \) и (если конденсаты не являются независимо 
+сохраняющимися) на \( \theta_1 - \theta_2 \). Будем считать, что \( F_p \) 
+принимает минимальное значение (которое должно быть приведено к 0), когда 
+\( |\psi_1| = u_1 > 0, |\psi_2| = u_2 > 0 \) и \( \theta_1 - \theta_2 = 0 \).
+Таким образом, либо нет фазовой связи (\( F_p \) не зависит от 
+\( \theta_1 - \theta_2 \)) и выбор \( \theta_1 - \theta_2 = 0 \) произволен, 
+или фазовая связь является такой, чтобы стимулировать фазовую синхронизацию.
+(Отметим, что случай фазовых рассинхронизаций полей могут быть тривиальным 
+образом восстановлены из нашего анализа путём отображения 
 \( \psi_2 \mapsto -\psi_1 \)).
 
-The field equations are obtained from \( F \) by demanding that the total 
-free energy \( E = \int F dx_1 dx_2 \) is stationary with respect to all 
-variations of \( \psi_1, \psi_2 \) and \( A_i \). A routine calculation yields 
+Уравнения поля получаются из \( F \), требуя, чтобы общая свободная энергия 
+\( E = \int F dx_1 dx_2 \) являлась стационарной по отношению ко всем 
+изменениям \( \psi_1, \psi_2 \) и \( A_i \). Обычный расчёт даёт 
 \begin{gather}
     D_i D_i \psi_a = 2\pder{F_p}{\psi_a^{*}}
     \label{eq:4} \\
@@ -38,14 +38,14 @@ variations of \( \psi_1, \psi_2 \) and \( A_i \). A routine calculation yields
         e\sum\limits_{a=1}^{2}\Im\left( \psi_a^* D_j \psi_a \right)
     \label{eq:5}
 \end{gather}
-This triple of coupled nonlinear partial differential equations supports 
-solutions of the form
+Решение этой тройки связанных нелинейных дифференциальных уравнений в частных 
+производных можно представить в виде
 \begin{gather}
     \psi_a = f_a(r)e^{i\theta} \nonumber \\
     (A_1, A_2) = \frac{a(r)}{r}(-\sin\theta, \cos\theta)
     label{eq:6}
 \end{gather}
-where \( f_1, f_2, a \) are real profile functions. Note that in some cases 
+где \( f_1, f_2, a \) вещественные функции профиля. Note that in some cases 
 mixed gradient terms favour non-axially symmetric solutions. In this section 
 we consider only axially symmetric vortices. Fields within the above ansatz 
 satisfy the field equations if and only if the profile functions 
