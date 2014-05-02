@@ -118,13 +118,13 @@
 размера \( 2\times2 \). Следовательно, её собственные числа 
 \( \mu_1^2, \mu_2^2\), допустим вещественны и положительны, и её собственные 
 векторы \( v_1, v_2 \) формируют ортонормированный базис на \( \mathbb{R} \). 
-Expanding in the basis \( v_1, v_2 \)
+Расширяя базис \( v_1, v_2 \)
 \begin{equation}
     \epsilon(r) = \chi_1(r) v_1 + \chi_2(r) v_2
     \label{eq:17}
 \end{equation}
-we see that \( \chi_1, \chi_2 \) satisfy the uncoupled pair of ordinary 
-differential equations
+мы видим, что \( \chi_1, \chi_2 \) удовлетворяет несвязанной паре обычных 
+дифференциальных уравнений
 \begin{equation}
     \chi''_a + \frac{1}{r}\chi'_a = \mu_a^2 \chi_a
     \label{eq:18}
@@ -134,9 +134,10 @@ differential equations
     \chi_a(r) = q_a K_0(\mu_a r)
     \label{eq:19}
 \end{equation}
-где \( q_1, q_2 \) некоторые (неизвестные) константы. Since \( v_1, v_2 \) are 
-orthonormal, there is an angle \( \Theta \), which we call the \emph{mixing 
-angle}, such that the eigenvectors of \( \mathcal{H} \) are
+где \( q_1, q_2 \) некоторые (неизвестные) константы. Т.к. \( v_1, v_2 \) 
+ортонормированы, существует угол \( \Theta \), называемый 
+\emph{углом смешивания}, такой, что собственные векторы \( \mathcal{H} \) 
+являются
 \begin{equation}
     v_1 = \left( \begin{array}{c}
         \cos\Theta \\
@@ -160,19 +161,19 @@ angle}, such that the eigenvectors of \( \mathcal{H} \) are
 
 Из этого анализа следует, что:
 \begin{enumerate}
-    \item In general there are three fundamental length scales in the problem 
-        (in contrast to the two length scales of one-component Ginzburg-Landau 
-        theory) which manifest themselves in the vortex asymptotics, namely 
-        \( 1/\mu_A, 1/\mu_1 \) and \( 1/\mu_2 \).
-    \item These are constructed from the vacuum expectation values \( u_a \) 
-        of \( |\psi_a| \) (in the case of \( 1/\mu_A \)) and from the 
-        eigenvalues of \( \mathcal{H} \), the Hessian matrix of \( F_p \) 
-        about the vacuum (i.e. the ground state).
-    \item \( 1/\mu_{A} \) can be interpreted as the London penetration length 
-        of the magnetic field.
-    \item However, unless the mixing angle \( \Theta \) is a multiple of 
-        \( \pi/2, 1/\mu_1 \) and \( 1/\mu_2 \) cannot be interpreted as the 
-        coherence lengths of \( \psi_1, \psi_2 \) in the usual sense. This is 
+    \item В целом есть три фундаментальные масштабные длины в задаче (в 
+        отличие от двух масштабных длин в однокомпонентной теории 
+        Гинзбурга-Ландау), которые проявляются в вихревых асимптотиках, а 
+        именно \( 1/\mu_A, 1/\mu_1 \) и \( 1/\mu_2 \).
+    \item Они строятся из vacuum expectation values \( u_a \) 
+        jn \( |\psi_a| \) (в случае с \( 1/\mu_A \)) и из собственных значений 
+        \( \mathcal{H} \), матрица Гессе \( F_p \) about the vacuum (т.е. 
+        основного состояния).
+    \item \( 1/\mu_{A} \) может быть интерпретирована как лондоновская глубина 
+        проникновения магнитного поля.
+    \item Однако если угол смешивания \( \Theta \) не является кратным  
+        \( \pi/2, 1/\mu_1 \) и \( 1/\mu_2 \) не может быть истолкована как 
+        длина когерентности \( \psi_1, \psi_2 \) в обычном смылсе. This is 
         because the normal modes of the field theory close to the vacuum are 
         not \( |\psi_a| - u_a \), but rather
         \[ 
@@ -190,11 +191,11 @@ angle}, such that the eigenvectors of \( \mathcal{H} \) are
         One should use the representation in terms of the fields 
         \( \chi_{1,2} \) to be handle properly the two length scales 
         associated with the density recovery.
-    \item This analysis tells us only about the vortex structure at large 
-        \( r \). It gives no direct information on the vortex core, which is 
-        important to understand quantitatively the nature of the vortex 
-        interactions at intermediate and short distances which will be 
-        studied numerically in the section \ref{ch:5}.
+    \item Этот анализ говорит нам только о вихревой структуры при больших
+        \( r \). Это не дает прямую информацию о ядре вихря, чтобы 
+        количественно понять природу вихревых взаимодействий на переходных 
+        и коротких расстояниях, которые будут численно изучены в разделе 
+        \ref{ch:5}.
 \end{enumerate}
 
 Since the gauge field mediates a repulsive force between vortices, while the 
@@ -219,9 +220,9 @@ dipole moment \( 2\pi q_0 \). Two such hypothetical particles held distance
     \label{eq:22}
 \end{equation}
 
-This formula reproduces the prediction explained above: the long range 
-interaction will be attractive if (at least) one of \( \mu_1, \mu_2 \) is less 
-than \( \mu_A \). 
+Эта формула воспроизводит предсказанное выше объяснение: взаимодействие на 
+больших расстояниях будет притягивающим, если (по крайней мере) один из 
+\( \mu_1, \mu_2 \) меньше чем \( \mu_A \). 
 
 One can ask, retrospectively, whether the approximation of \emph{linearizing} 
 in the small quantities \( \alpha(r), \chi_1(r), \chi_2(r) \) is well 
