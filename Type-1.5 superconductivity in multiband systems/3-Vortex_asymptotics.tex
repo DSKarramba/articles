@@ -136,7 +136,7 @@
 \end{equation}
 где \( q_1, q_2 \) некоторые (неизвестные) константы. Т.к. \( v_1, v_2 \) 
 ортонормированы, существует угол \( \Theta \), называемый 
-\emph{углом смешивания}, такой, что собственные векторы \( \mathcal{H} \) 
+\textit{углом смешивания}, такой, что собственные векторы \( \mathcal{H} \) 
 являются
 \begin{equation}
     v_1 = \left( \begin{array}{c}
@@ -165,32 +165,32 @@
         отличие от двух масштабных длин в однокомпонентной теории 
         Гинзбурга-Ландау), которые проявляются в вихревых асимптотиках, а 
         именно \( 1/\mu_A, 1/\mu_1 \) и \( 1/\mu_2 \).
-    \item Они строятся из vacuum expectation values \( u_a \) 
-        jn \( |\psi_a| \) (в случае с \( 1/\mu_A \)) и из собственных значений 
+    \item Они строятся из вакуумного среднего \( u_a \) в \( |\psi_a| \) 
+        (в случае с \( 1/\mu_A \)) и из собственных значений 
         \( \mathcal{H} \), матрица Гессе \( F_p \) about the vacuum (т.е. 
         основного состояния).
     \item \( 1/\mu_{A} \) может быть интерпретирована как лондоновская глубина 
         проникновения магнитного поля.
     \item Однако если угол смешивания \( \Theta \) не является кратным  
         \( \pi/2, 1/\mu_1 \) и \( 1/\mu_2 \) не может быть истолкована как 
-        длина когерентности \( \psi_1, \psi_2 \) в обычном смылсе. This is 
-        because the normal modes of the field theory close to the vacuum are 
-        not \( |\psi_a| - u_a \), but rather
+        длина когерентности \( \psi_1, \psi_2 \) в обычном смысле. Это потому, 
+        что нормальные режимы теории поля, близкие к вакууму не 
+        \( |\psi_a| - u_a \), а скорее
         \[ 
             \chi_1 = (|\psi_1| - u_1)\cos\Theta - (|\psi_2| - u_2)\sin\Theta 
         \]
         \[ 
             \chi_2 = (|\psi_1| - u_1)\sin\Theta - (|\psi_2| - u_2)\cos\Theta 
         \]
-        obtained by rotating through the mixing angle \( \Theta \), which is 
-        also determined by \( \mathcal{H} \). Therefore in general (e.g. in 
-        the presence of intercomponent Josephson coupling) for a one-flux 
-        quantum axially symmetric vortex, the recovery of both fields 
-        \( \psi_a \) at \emph{very} long range will be according to the same 
-        exponential law, set by the smaller of the masses \( \mu_1, \mu_2 \); 
-        One should use the representation in terms of the fields 
-        \( \chi_{1,2} \) to be handle properly the two length scales 
-        associated with the density recovery.
+        получаемые вращением на угол смешивания \( \Theta \), который также 
+        определяется \( \mathcal{H} \). Поэтому в целом (например, в 
+        присутствии межкомпонентной джозефсоновской связи) для однопоточного
+        квантово осесимметричного вихря, восстановление обоих полей
+        \( \psi_a \) на \textit{очень} большом диапазоне будет по тому же 
+        экспоненциальному закону, устанавливать не меньшее из масс 
+        \( \mu_1, \mu_2 \); Следует использовать представление в терминах 
+        \( \chi_{1,2} \), которые будут должным образом обрабатывать два 
+        пространственных масштаба, связанных с восстановлением плотности.
     \item Этот анализ говорит нам только о вихревой структуры при больших
         \( r \). Это не дает прямую информацию о ядре вихря, чтобы 
         количественно понять природу вихревых взаимодействий на переходных 
@@ -198,22 +198,23 @@
         \ref{ch:5}.
 \end{enumerate}
 
-Since the gauge field mediates a repulsive force between vortices, while the 
-condensate fields mediate an attractive force, it is clear that we can read 
-off from the above analysis the condition under which the intervortex force is 
-attractive at long range: we require that \( 1/\mu_A \) is \emph{not} the 
-longest of the three length scales, or, more explicitly, that (at least) one 
-of the eigenvalues of \( \mathcal{H} \) should be less that 
-\( \mu_A^2 = e^2(u_1^2 + u_2^2) \). We can predict an explicit formula for 
-the long range two-vortex interaction potential, using the point vortex 
-formalism\cite{bib:19} (a brief review of the method in given in Appendix C). 
-This rests on the observation that, far from its core, the fields of the 
-vortex are identical to those of a hypothetical point particle in a linear 
-theory with two Klein-Gordon fields (\( \chi_1 \) and \( \chi_2 \) above) of 
-mass and a vector field (A) of mass \( \mu_A \). The point particle carries 
-scalar monopole charges \( 2\pi q_1 \) and \( 2\pi q_2 \) and a magnetic 
-dipole moment \( 2\pi q_0 \). Two such hypothetical particles held distance 
-\( r \) apart would experience an interaction potential
+Поскольку калибровочное поле является посредником силы отталкивания между 
+вихрями, а поля конденсатов посредником силы притяжения, ясно, что можно 
+считать из приведенного выше анализа условие, при котором межвихревая сила 
+является притягивающей на большом расстоянии: мы требуем, чтобы \( 1/\mu_A \) 
+являлось не самым большим из трёх пространственных масштабных длин, или, 
+более явно, чтобы (по крайней мере) одно из собственных значений 
+\( \mathcal{H} \) должно быть меньше, чем \( \mu_A^2 = e^2(u_1^2 + u_2^2) \). 
+Мы может предсказать явную формулу для дальнодействующего двухвихревого 
+потенциала взаимодействия, с помощью формализма точечного вихря \cite{bib:19} 
+(краткий обзор метода приведён в Приложении C). Это основывается на 
+наблюдении, что недалеко от его ядра, поля вихря совпадают с гипотетической 
+точечной частицей в линейной теории с в двумя полями Клейна-Гордона 
+(\( \chi_1 \) и \( \chi_2 \) указанные выше) массы и векторного поля (\( A \)) 
+массы \( \mu_A \). Точечная частица несёт монопольные скалярные заряды 
+\( 2\pi q_1 \) и \( 2\pi q_2 \), и магнитный дипольный момент \( 2\pi q_0 \). 
+Две таких гипотетических частицы, удерживаемые на расстоянии \( r \) 
+испытывают потенциал взаимодействия
 \begin{equation}
     V(r) = 2\pi\left[ q_0^2 K_0(\mu_A r) - q_1^2 K_0(\mu_1 r) - 
         q_2^2 K_0(\mu_2 r) \right]
@@ -224,21 +225,22 @@ dipole moment \( 2\pi q_0 \). Two such hypothetical particles held distance
 больших расстояниях будет притягивающим, если (по крайней мере) один из 
 \( \mu_1, \mu_2 \) меньше чем \( \mu_A \). 
 
-One can ask, retrospectively, whether the approximation of \emph{linearizing} 
-in the small quantities \( \alpha(r), \chi_1(r), \chi_2(r) \) is well 
-justified. Rigorous analysis of the single component model\cite{bib:20} shows 
-that if either of the scalar mode masses, say, exceeds \( 2\mu_A \), then 
-quadratic terms in \( \alpha \) become comparable at large \( r \) with linear 
-terms in \( \chi_2 \), so that the equation for \( \chi_2 \) should include 
-extra terms. In this case, \( \chi_2 \) decays like \( K_0(\mu_A r)^2 \) 
-rather than \( K_0(\mu_2 r) \). One should note, however that, unless
-\( \mu_1 > 2\mu_A \) also, the leading term in \eqref{eq:21}, decaying like 
-\( K_0(\mu_1 r) \), is still correct, and it is only the leading term which 
-determines the nature (attractive or repulsive) of the intervortex 
-interactions at long range. The case of interest to us is when the long-range 
-force is attractive, that is, when at least one of \( \mu_1, \mu_2 \) is 
-\emph{less than} \( \mu_A \), so the linearized analysis presented above 
-suffices for our purposes.
+Можно спросить, ретроспективно, то ли приближений \textit{линеаризации} в 
+малых параметрах \( \alpha(r), \chi_1(r), \chi_2(r) \) является вполне 
+оправданным. Строгий анализ однокомпонентной модели \cite{bib:20} показывает, 
+что если любая из масс скалярного режима, скажем превышает \( 2\mu_A \), то 
+квадратичные члены в \( \alpha \) становятся сопоставимыми при больших \( r \) 
+с линейными членами \( \chi_2 \), так что уравнение для \( \chi_2 \) должно 
+включать в себя дополнительные условия. В этом случае \( \chi_2 \) убывает как 
+\( K_0(\mu_A r)^2 \), а не \( K_0(\mu_2 r) \). Следует отметить, однако, что 
+если \( \mu_1 > 2\mu_A \) также, главное слагаемое \eqref{eq:21}, спадает как 
+\( K_0(\mu_1 r) \), по-прежнему является верным, и это только главное 
+слагаемое, которое определяет характер (притяжение или отталкивание) в 
+межвихревом взаимодействии на больших расстояниях. Особый интерес для нас 
+представляет случай, когда дальнодействующая сила является притягивающей, то 
+есть, когда хотя бы один из \( \mu_1, \mu_2 \) является \textit{меньше} чем 
+\( \mu_A \), так анализ линеаризованного уравнения, представленный выше 
+является достаточным для наших целей.
 
 \section{Симметричная модель \texorpdfstring{$ U(1) \times U(1) $}
   {U(1) x U(1)}}
